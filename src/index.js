@@ -37,3 +37,8 @@ fetch( jokeUrl )
 CRUD.getUsuario('2').then(
     console.log
 );
+
+CRUD.crearUsuario({
+    name : 'Yhomarth Reyes',
+    job : 'Developer'
+}).then ( console.log )
