@@ -1,7 +1,9 @@
-import { obtenerChiste } from './js/http-provider';
+// import { obtenerChiste } from './js/http-provider';
+
+import { init } from './js/chistes-page';
 
 
-const jokeUrl = 'https://api.chucknorris.io/jokes/random';
+// const jokeUrl = 'https://api.chucknorris.io/jokes/random';
 
 /*
 fetch(jokeUrl).then( resp => {
@@ -24,4 +26,6 @@ fetch( jokeUrl )
     });
 */
 
-obtenerChiste().then(  console.log );
+// obtenerChiste().then(  console.log );
+
+init();
