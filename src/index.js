@@ -1,9 +1,10 @@
 // import { obtenerChiste } from './js/http-provider';
 
 // import { init } from './js/chistes-page';
-import { obtenerUsuarios } from './js/http-provider';
-import { init } from './js/usuarios-page';
+//import { init } from './js/usuarios-page';
 
+import * as CRUD from './js/crud-provider';
+ 
 
 // const jokeUrl = 'https://api.chucknorris.io/jokes/random';
 
@@ -30,4 +31,9 @@ fetch( jokeUrl )
 
 // obtenerChiste().then(  console.log );
 
-init();
+// init();
+
+
+CRUD.getUsuario('2').then(
+    console.log
+);
