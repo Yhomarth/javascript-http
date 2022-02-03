@@ -33,7 +33,7 @@ fetch( jokeUrl )
 
 // init();
 
-
+/*
 CRUD.getUsuario('2').then(
     console.log
 );
@@ -47,3 +47,6 @@ CRUD.actualizarUsuario(1, {
     name : 'Rosa',
     job : 'Agente Lavado Activo'
 }).then(console.log);
+*/
+
+CRUD.borrarUsuario( '1sssssse' ).then( console.log );
