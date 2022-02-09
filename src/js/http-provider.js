@@ -23,6 +23,8 @@ fetch( jokeUrl )
     });
     */
 
+    const cloudPreset = 'kw8qinef';
+    const cloudUrl = 'https://api.cloudinary.com/v1_1/dfp6cls0i/upload';
 
 
     const obtenerChiste = async () => {
@@ -71,7 +73,41 @@ fetch( jokeUrl )
 
     }
 
+    // archivo a Subir tipo File
+    const subirImagen = async ( archivoSubir ) => {
+
+
+        const formData = new FormData();
+        formData.append('upload_preset', cloudPreset);
+        formData.append('file', archivoSubir );
+
+        try{
+
+            const resp = await fetch(cloudUrl, {
+                method : 'POST',
+                body : formData
+            });
+
+            if(resp.ok){
+                const cloudResp = await resp.json()
+                //console.log(cloudResp);
+                return cloudResp.url;
+            }
+            else {
+                
+                throw await resp.json();
+            }
+
+        }
+        catch(err){
+            throw err;
+        }
+
+
+    }
+
     export {
         obtenerChiste,
-        obtenerUsuarios
+        obtenerUsuarios,
+        subirImagen
     }
