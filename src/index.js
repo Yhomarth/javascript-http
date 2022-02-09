@@ -1,9 +1,11 @@
 // import { obtenerChiste } from './js/http-provider';
 
+import { init } from './js/archivos-page';
+
 // import { init } from './js/chistes-page';
 //import { init } from './js/usuarios-page';
 
-import * as CRUD from './js/crud-provider';
+// import * as CRUD from './js/crud-provider';
  
 
 // const jokeUrl = 'https://api.chucknorris.io/jokes/random';
@@ -49,4 +51,6 @@ CRUD.actualizarUsuario(1, {
 }).then(console.log);
 */
 
-CRUD.borrarUsuario( '1sssssse' ).then( console.log );
+// CRUD.borrarUsuario( '1sssssse' ).then( console.log );
+
+init();
